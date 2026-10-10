@@ -1,20 +1,39 @@
 const MEDALS = ["🥇", "🥈", "🥉"];
 
-// Combined ranking: average of Fifi's and Emu's positions (lower is better).
-function combine(fifi, emu) {
-  return PEOPLE
-    .map((name) => ({ name, score: (fifi.indexOf(name) + emu.indexOf(name)) / 2 }))
-    .sort((a, b) => a.score - b.score)
-    .map((p) => p.name);
+// A ranking is a list of names, where a nested list means those people are tied,
+// e.g. ["Jason", ["Claytron", "Gab"]]. Tied people share a rank and the next rank skips.
+function ranked(entries) {
+  const rows = [];
+  entries.forEach((entry) => {
+    const group = Array.isArray(entry) ? entry : [entry];
+    const rank = rows.length + 1;
+    group.forEach((name) => rows.push({ name, rank, tie: group.length > 1 }));
+  });
+  return rows;
 }
 
-function list(names, className) {
+// Combined ranking: average of Fifi's and Emu's ranks (lower is better).
+function combine(fifi, emu) {
+  const rankOf = (rows, name) => rows.find((r) => r.name === name).rank;
+  const f = ranked(fifi), e = ranked(emu);
+  const scored = PEOPLE
+    .map((name) => ({ name, score: (rankOf(f, name) + rankOf(e, name)) / 2 }))
+    .sort((a, b) => a.score - b.score);
+  const groups = [];
+  scored.forEach((p, i) => {
+    if (i > 0 && p.score === scored[i - 1].score) groups[groups.length - 1].push(p.name);
+    else groups.push([p.name]);
+  });
+  return groups.map((g) => (g.length > 1 ? g : g[0]));
+}
+
+function list(entries, className) {
   const ol = document.createElement("ol");
   ol.className = `ranking ${className}`;
-  names.forEach((name, i) => {
+  ranked(entries).forEach(({ name, rank, tie }) => {
     const li = document.createElement("li");
-    li.innerHTML = `<span class="pos">${MEDALS[i] || `#${i + 1}`}</span><span class="name"></span>`;
-    li.querySelector(".name").textContent = name;
+    li.innerHTML = `<span class="pos">${MEDALS[rank - 1] || `#${rank}`}</span><span class="name"></span>`;
+    li.querySelector(".name").textContent = tie ? `${name} (tie)` : name;
     ol.appendChild(li);
   });
   return ol;
@@ -47,7 +66,7 @@ CATEGORIES.forEach((cat) => {
   h2.textContent = `${cat.emoji} ${cat.title}`;
   const cols = document.createElement("div");
   cols.className = "cols";
-  const done = (names) => names.length === PEOPLE.length;
+  const done = (entries) => entries.flat().length === PEOPLE.length;
   cols.append(
     column("Fifi", cat.fifi, "fifi"),
     column("Emu", cat.emu, "emu"),

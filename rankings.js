@@ -1,6 +1,7 @@
 // ✏️ Edit this file to change the rankings.
 // Each category has Fifi's list and Emu's list, from #1 (top) to last.
 // Every list should include everyone in PEOPLE exactly once.
+// To make people tie, put them in their own brackets: ["Jason", ["Claytron", "Gab"]]
 
 const PEOPLE = ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"];
 
@@ -29,7 +30,7 @@ const CATEGORIES = [
     title: "Grip Strength",
     emoji: "✊",
     note: "Estimated by looking at a photo. Very scientific.",
-    fifi: ["Jason", "Furtoe", "David", "Allan", "Claytron", "Gab"],
+    fifi: ["Jason", "Furtoe", "David", "Allan", ["Claytron", "Gab"]],
     emu: [],
   },
   {
