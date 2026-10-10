@@ -16,6 +16,7 @@ const CATEGORIES = [
   {
     title: "Most Muscular",
     emoji: "💪",
+    note: "Not the hands. Like, overall. Whole-body vibes. 💅",
     fifi: ["Jason", "Furtoe", "Claytron", "David", "Gab", "Allan"],
     emu: [],
   },
