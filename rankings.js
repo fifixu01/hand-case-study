@@ -26,6 +26,13 @@ const CATEGORIES = [
     emu: [],
   },
   {
+    title: "Grip Strength",
+    emoji: "✊",
+    note: "Estimated by looking at a photo. Very scientific.",
+    fifi: [],
+    emu: [],
+  },
+  {
     title: "Funniest",
     emoji: "😂",
     fifi: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
