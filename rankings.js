@@ -19,6 +19,13 @@ const CATEGORIES = [
     emu: [],
   },
   {
+    title: "Palm Reading: Longest Life Line",
+    emoji: "🔮",
+    note: "Professionally read from the back of their hands.",
+    fifi: [],
+    emu: [],
+  },
+  {
     title: "Funniest",
     emoji: "😂",
     fifi: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],

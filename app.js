@@ -56,10 +56,11 @@ CATEGORIES.forEach((cat) => {
       : column("Combined", [], "combined"),
   );
   section.append(h2);
-  if (cat.mystery) {
+  const note = cat.mystery ? "What is this category about? You will never know. 🤫" : cat.note;
+  if (note) {
     const p = document.createElement("p");
     p.className = "secret";
-    p.textContent = "What is this category about? You will never know. 🤫";
+    p.textContent = note;
     section.append(p);
   }
   section.append(cols);
