@@ -1,0 +1,124 @@
+:root {
+  --bg: #fff7f0;
+  --card: #ffffff;
+  --text: #2b2230;
+  --muted: #7a6e80;
+  --border: #f0e2d8;
+  --fifi: #e0559a;
+  --emu: #3a86d4;
+  --combined: #8a5cd1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1720;
+    --card: #2a2330;
+    --text: #f5eef8;
+    --muted: #b3a6bb;
+    --border: #3d3345;
+    --fifi: #ff7ab8;
+    --emu: #6fb2ff;
+    --combined: #b48cff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3 { font-family: "Fredoka", system-ui, sans-serif; margin: 0; }
+
+.hero {
+  text-align: center;
+  padding: 56px 16px 32px;
+}
+
+.hero h1 { font-size: clamp(2.4rem, 7vw, 4rem); }
+
+.tagline { color: var(--muted); font-size: 1.1rem; margin: 8px 0 20px; }
+
+.fifi { color: var(--fifi); font-weight: 600; }
+.emu { color: var(--emu); font-weight: 600; }
+.combined { color: var(--combined); font-weight: 600; }
+
+.cast {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cast li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-weight: 600;
+}
+
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.04);
+}
+
+.card h2 { font-size: 1.5rem; margin-bottom: 14px; }
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.col h3 { font-size: 1rem; margin-bottom: 6px; }
+
+.ranking {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.ranking li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: var(--bg);
+  font-size: 0.95rem;
+}
+
+.ranking .pos { width: 1.8em; text-align: center; color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 560px) {
+  .cols { grid-template-columns: 1fr; }
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 32px 16px 48px;
+}

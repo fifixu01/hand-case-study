@@ -1,3 +1,5 @@
 # hand-case-study
 
-A hand case study website. Details coming soon.
+Rankings of Claytron, Gab, Allan, Jason, Furtoe and David across different categories, by Fifi & Emu.
+
+Open `index.html` in a browser to view. Edit `rankings.js` to change categories and rankings.
