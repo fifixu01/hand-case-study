@@ -15,7 +15,7 @@ const CATEGORIES = [
   {
     title: "Most Muscular",
     emoji: "💪",
-    fifi: ["Jason", "Furtoe", "Claytron", "David", "Allan", "Gab"],
+    fifi: ["Jason", "Furtoe", "Claytron", "David", "Gab", "Allan"],
     emu: [],
   },
   {
