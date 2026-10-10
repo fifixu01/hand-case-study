@@ -13,6 +13,12 @@ const CATEGORIES = [
     emu: [], // empty = Emu hasn't ranked yet
   },
   {
+    title: "Most Muscular",
+    emoji: "💪",
+    fifi: ["Jason", "Furtoe", "Claytron", "David", "Allan", "Gab"],
+    emu: [],
+  },
+  {
     title: "Funniest",
     emoji: "😂",
     fifi: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
