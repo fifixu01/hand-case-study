@@ -6,6 +6,13 @@ const PEOPLE = ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"];
 
 const CATEGORIES = [
   {
+    title: "The Most Important Category",
+    emoji: "❓",
+    mystery: true, // shh 🤫
+    fifi: ["Furtoe", "David", "Claytron", "Gab", "Jason", "Allan"],
+    emu: [], // empty = Emu hasn't ranked yet
+  },
+  {
     title: "Funniest",
     emoji: "😂",
     fifi: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],

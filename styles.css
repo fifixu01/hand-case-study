@@ -122,3 +122,12 @@ footer {
   font-size: 0.85rem;
   padding: 32px 16px 48px;
 }
+
+.card.mystery {
+  border: 2px dashed var(--combined);
+  background: linear-gradient(135deg, var(--card), color-mix(in srgb, var(--combined) 10%, var(--card)));
+}
+
+.secret { color: var(--muted); font-style: italic; margin: -8px 0 14px; }
+
+.pending { color: var(--muted); font-style: italic; font-size: 0.9rem; margin: 0; }

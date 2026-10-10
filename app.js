@@ -26,7 +26,14 @@ function column(label, names, className) {
   const h3 = document.createElement("h3");
   h3.className = className;
   h3.textContent = label;
-  div.append(h3, list(names, className));
+  if (names.length) {
+    div.append(h3, list(names, className));
+  } else {
+    const p = document.createElement("p");
+    p.className = "pending";
+    p.textContent = "Not ranked yet…";
+    div.append(h3, p);
+  }
   return div;
 }
 
@@ -35,16 +42,26 @@ document.getElementById("cast").innerHTML = PEOPLE.map((p) => `<li>${p}</li>`).j
 const main = document.getElementById("categories");
 CATEGORIES.forEach((cat) => {
   const section = document.createElement("section");
-  section.className = "card";
+  section.className = cat.mystery ? "card mystery" : "card";
   const h2 = document.createElement("h2");
   h2.textContent = `${cat.emoji} ${cat.title}`;
   const cols = document.createElement("div");
   cols.className = "cols";
+  const done = (names) => names.length === PEOPLE.length;
   cols.append(
     column("Fifi", cat.fifi, "fifi"),
     column("Emu", cat.emu, "emu"),
-    column("Combined", combine(cat.fifi, cat.emu), "combined"),
+    done(cat.fifi) && done(cat.emu)
+      ? column("Combined", combine(cat.fifi, cat.emu), "combined")
+      : column("Combined", [], "combined"),
   );
-  section.append(h2, cols);
+  section.append(h2);
+  if (cat.mystery) {
+    const p = document.createElement("p");
+    p.className = "secret";
+    p.textContent = "What is this category about? You will never know. 🤫";
+    section.append(p);
+  }
+  section.append(cols);
   main.appendChild(section);
 });
