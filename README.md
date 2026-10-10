@@ -1,3 +1,3 @@
-# mini-website
+# hand-case-study
 
-A mini website project. Details coming soon.
+A hand case study website. Details coming soon.
