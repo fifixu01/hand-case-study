@@ -1,17 +1,17 @@
 // ✏️ Edit this file to change the rankings.
 // Each category has Fifi's list and Emu's list, from #1 (top) to last.
-// Every list should include everyone in PEOPLE exactly once.
+// A list can leave someone out (they just won't be ranked in that category).
 // To make people tie, put them in their own brackets: ["Jason", ["Claytron", "Gab"]]
 
-const PEOPLE = ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"];
+const PEOPLE = ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David", "Eggsnut"];
 
 const CATEGORIES = [
   {
     title: "The Most Important Category",
     emoji: "❓",
     mystery: true, // shh 🤫
-    fifi: ["Furtoe", "David", "Jason", ["Claytron", "Gab"], "Allan"],
-    emu: ["Furtoe", "David", "Gab", "Jason", "Allan", "Claytron"],
+    fifi: ["Furtoe", "Eggsnut", "David", "Jason", ["Claytron", "Gab"], "Allan"],
+    emu: ["Furtoe", "Eggsnut", "David", "Gab", "Jason", "Allan", "Claytron"],
   },
   {
     title: "Palm Reading: Longest Life Line",

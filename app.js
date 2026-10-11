@@ -14,7 +14,9 @@ function ranked(entries) {
 function combine(fifi, emu) {
   const rankOf = (rows, name) => rows.find((r) => r.name === name).rank;
   const f = ranked(fifi), e = ranked(emu);
+  // Only people ranked by both count (e.g. someone added after a category was ranked).
   const scored = PEOPLE
+    .filter((name) => f.some((r) => r.name === name) && e.some((r) => r.name === name))
     .map((name) => ({ name, score: (rankOf(f, name) + rankOf(e, name)) / 2 }))
     .sort((a, b) => a.score - b.score);
   const groups = [];
@@ -66,11 +68,10 @@ CATEGORIES.forEach((cat) => {
   h2.children[1].textContent = cat.title;
   const cols = document.createElement("div");
   cols.className = "cols";
-  const done = (entries) => entries.flat().length === PEOPLE.length;
   cols.append(
     column("Fifi", cat.fifi, "fifi"),
     column("Emu", cat.emu, "emu"),
-    done(cat.fifi) && done(cat.emu)
+    cat.fifi.length && cat.emu.length
       ? column("Combined", combine(cat.fifi, cat.emu), "combined")
       : column("Combined", [], "combined"),
   );
@@ -119,8 +120,7 @@ SUBJECTS.forEach((subject, i) => {
     board.querySelector(".observations").appendChild(li);
   });
   CATEGORIES.forEach((cat) => {
-    const done = (entries) => entries.flat().length === PEOPLE.length;
-    if (!done(cat.fifi) || !done(cat.emu)) return;
+    if (!cat.fifi.length || !cat.emu.length) return;
     const row = ranked(combine(cat.fifi, cat.emu)).find((r) => r.name === subject.name);
     if (!row) return;
     const li = document.createElement("li");
