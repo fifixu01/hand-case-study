@@ -34,4 +34,10 @@ const CATEGORIES = [
     fifi: ["Jason", "Furtoe", "David", "Allan", ["Claytron", "Gab"]],
     emu: [],
   },
+  {
+    title: "Aesthetic Ranking",
+    emoji: "✨",
+    fifi: ["Jason", "David", ["Claytron", "Gab", "Allan", "Furtoe"]],
+    emu: ["David", "Jason", ["Claytron", "Gab", "Allan", "Furtoe"]],
+  },
 ];
