@@ -21,7 +21,6 @@ const SUBJECTS = [
     observations: [
       "Subject was asked to provide an object for scale. Subject provided a ring.",
       "Subject is not wearing the ring. The ring is simply resting on the hand. Researchers have questions.",
-      "Pinky is aggressively separated from the other fingers, as if it is not part of the group.",
       "Wall is beige. This tells us nothing but we wanted it on the record.",
     ],
     diagnosis: "Elite hand. Strong grip. Unclear relationship with jewelry.",
@@ -34,7 +33,6 @@ const SUBJECTS = [
       "Subject submitted their photo from inside the engine of a car.",
       "Hand is positioned as if it is about to fix the engine. It is not going to fix the engine.",
       "A quarter has been placed on the hand for scale, so the engine also now knows how big the hand is.",
-      "A small red mark is visible on the wrist. Possibly an engine injury. Possibly ketchup.",
     ],
     diagnosis: "Mechanically confident. Mechanically unproven.",
   },
@@ -68,7 +66,8 @@ const SUBJECTS = [
     specimen: "Unknown. Possibly a hand. Submitted as a video game profile picture.",
     observations: [
       "Subject did not submit a photo of the back of their hand.",
-      "Subject submitted their video game profile picture, in which the hand is adjusting a shirt collar.",
+      "Subject submitted their video game profile picture: a mirror selfie, in which the hand is busy holding the phone.",
+      "The hand was too busy taking the photo to be in the photo.",
       "Connection strength: 3 bars. Hand strength: undetermined.",
       "Researchers ranked this hand anyway, based on vibes and the visible bicep.",
     ],
