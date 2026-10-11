@@ -28,7 +28,7 @@ const SUBJECTS = [
   {
     name: "Gab",
     photo: "images/gab.jpg",
-    specimen: "Right hand, back side, inside a car engine",
+    specimen: "Left hand, back side, inside a car engine",
     observations: [
       "Subject submitted their photo from inside the engine of a car.",
       "Hand is positioned as if it is about to fix the engine. It is not going to fix the engine.",
