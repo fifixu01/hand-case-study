@@ -30,8 +30,10 @@ function list(entries, className) {
   ol.className = `ranking ${className}`;
   ranked(entries).forEach(({ name, rank, tie }) => {
     const li = document.createElement("li");
+    if (rank === 1) li.className = "top";
     li.innerHTML = `<span class="pos">#${rank}</span><span class="name"></span>`;
-    li.querySelector(".name").textContent = tie ? `${name} (tie)` : name;
+    li.querySelector(".name").textContent = name;
+    if (tie) li.insertAdjacentHTML("beforeend", `<span class="tie">tie</span>`);
     ol.appendChild(li);
   });
   return ol;
@@ -54,14 +56,14 @@ function column(label, names, className) {
   return div;
 }
 
-document.getElementById("cast").innerHTML = PEOPLE.map((p) => `<li>${p}</li>`).join("");
-
 const main = document.getElementById("categories");
 CATEGORIES.forEach((cat) => {
   const section = document.createElement("section");
   section.className = cat.mystery ? "card mystery" : "card";
   const h2 = document.createElement("h2");
-  h2.textContent = `${cat.emoji} ${cat.title}`;
+  h2.innerHTML = `<span class="sticker"></span><span></span>`;
+  h2.children[0].textContent = cat.emoji;
+  h2.children[1].textContent = cat.title;
   const cols = document.createElement("div");
   cols.className = "cols";
   const done = (entries) => entries.flat().length === PEOPLE.length;
