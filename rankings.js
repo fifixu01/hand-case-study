@@ -11,7 +11,7 @@ const CATEGORIES = [
     emoji: "❓",
     mystery: true, // shh 🤫
     fifi: ["Furtoe", "David", "Claytron", "Gab", "Jason", "Allan"],
-    emu: [], // empty = Emu hasn't ranked yet
+    emu: ["Furtoe", "David", "Gab", "Jason", "Allan", "Claytron"],
   },
   {
     title: "Most Muscular",
