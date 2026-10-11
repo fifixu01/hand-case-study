@@ -51,7 +51,7 @@ const SUBJECTS = [
   {
     name: "David",
     photo: "images/david.jpg",
-    specimen: "Right hand, back side, on lap, in the driver's seat",
+    specimen: "Left hand, back side, on lap, in the driver's seat",
     observations: [
       "Subject arrived with a quarter, a watch, AND a ring. Most overprepared subject in the study.",
       "Watch has a tachymeter, which means this hand can measure speed. It has never been used for this.",
