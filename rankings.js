@@ -25,7 +25,7 @@ const CATEGORIES = [
     emoji: "✊",
     note: "Estimated by looking at a photo. Very scientific.",
     fifi: ["Jason", "Furtoe", "David", "Allan", ["Claytron", "Gab"]],
-    emu: [],
+    emu: ["David", "Jason", "Furtoe", "Gab", ["Allan", "Claytron"]],
   },
   {
     title: "Aesthetic Ranking",
