@@ -18,7 +18,7 @@ const CATEGORIES = [
     emoji: "💪",
     note: "Not the hands. Like, overall. Whole-body vibes. 💅",
     fifi: ["Jason", "Furtoe", "Claytron", "David", "Gab", "Allan"],
-    emu: [],
+    emu: ["Jason", "David", "Furtoe", "Allan", "Claytron", "Gab"],
   },
   {
     title: "Palm Reading: Longest Life Line",
