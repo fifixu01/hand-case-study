@@ -34,28 +34,4 @@ const CATEGORIES = [
     fifi: ["Jason", "Furtoe", "David", "Allan", ["Claytron", "Gab"]],
     emu: [],
   },
-  {
-    title: "Funniest",
-    emoji: "😂",
-    fifi: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
-    emu: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
-  },
-  {
-    title: "Best Dressed",
-    emoji: "👗",
-    fifi: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
-    emu: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
-  },
-  {
-    title: "Most Likely to Be Late",
-    emoji: "⏰",
-    fifi: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
-    emu: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
-  },
-  {
-    title: "Best Cook",
-    emoji: "🍳",
-    fifi: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
-    emu: ["Claytron", "Gab", "Allan", "Jason", "Furtoe", "David"],
-  },
 ];
