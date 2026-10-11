@@ -18,7 +18,7 @@ const CATEGORIES = [
     emoji: "🔮",
     note: "Professionally read from the back of their hands.",
     fifi: ["David", "Claytron", "Jason", "Gab", "Allan", "Furtoe"],
-    emu: [],
+    emu: ["Furtoe", "Claytron", "Allan", "Jason", "Gab", "David"],
   },
   {
     title: "Grip Strength",
