@@ -17,20 +17,20 @@ const CATEGORIES = [
     title: "Palm Reading: Longest Life Line",
     emoji: "🔮",
     note: "Professionally read from the back of their hands.",
-    fifi: ["Claytron", "Allan", "Jason", "Gab", "David", "Furtoe"],
+    fifi: ["Claytron", "Allan", "Jason", "Eggsnut", "Gab", "David", "Furtoe"],
     emu: ["Furtoe", "Claytron", "Allan", "Jason", "Gab", "David"],
   },
   {
     title: "Grip Strength",
     emoji: "✊",
     note: "Estimated by looking at a photo. Very scientific.",
-    fifi: ["Jason", "Furtoe", "David", "Allan", ["Claytron", "Gab"]],
+    fifi: ["Jason", "Furtoe", "Eggsnut", "David", "Allan", ["Claytron", "Gab"]],
     emu: ["David", "Jason", "Furtoe", "Gab", ["Allan", "Claytron"]],
   },
   {
     title: "Aesthetic Ranking",
     emoji: "✨",
-    fifi: ["Jason", "David", ["Claytron", "Gab", "Allan", "Furtoe"]],
+    fifi: ["Eggsnut", "Jason", "David", ["Claytron", "Gab", "Allan", "Furtoe"]],
     emu: ["David", "Jason", ["Claytron", "Gab", "Allan", "Furtoe"]],
   },
 ];
