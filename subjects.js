@@ -22,6 +22,7 @@ const SUBJECTS = [
       "Subject was asked to provide an object for scale. Subject provided a ring.",
       "Subject is not wearing the ring. The ring is simply resting on the hand. Researchers have questions.",
       "Wall is beige. This tells us nothing but we wanted it on the record.",
+      "Even from just the back of the hand, you can tell this subject is muscular. The hand has been to the gym.",
     ],
     diagnosis: "Elite hand. Strong grip. Unclear relationship with jewelry.",
   },
