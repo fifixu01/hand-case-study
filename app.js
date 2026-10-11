@@ -85,3 +85,49 @@ CATEGORIES.forEach((cat) => {
   section.append(cols);
   main.appendChild(section);
 });
+
+// Subject files: a clipboard per person, with their combined rank in each finished category.
+const boards = document.getElementById("subjects");
+SUBJECTS.forEach((subject, i) => {
+  const board = document.createElement("article");
+  board.className = "clipboard";
+  board.innerHTML = `
+    <div class="clip"></div>
+    <div class="sheet">
+      <p class="file-no">Subject #${String(i + 1).padStart(3, "0")}</p>
+      <h3 class="subject-name"></h3>
+      <figure class="specimen">
+        <img alt="">
+        <figcaption></figcaption>
+      </figure>
+      <h4>Observations</h4>
+      <ul class="observations"></ul>
+      <h4>Results</h4>
+      <ul class="results"></ul>
+      <h4>Diagnosis</h4>
+      <p class="diagnosis"></p>
+      <div class="stamp">Analyzed</div>
+    </div>`;
+  board.querySelector(".subject-name").textContent = subject.name;
+  board.querySelector("img").src = subject.photo;
+  board.querySelector("img").alt = `${subject.name}'s hand`;
+  board.querySelector("figcaption").textContent = `Specimen: ${subject.specimen}`;
+  board.querySelector(".diagnosis").textContent = subject.diagnosis;
+  subject.observations.forEach((text) => {
+    const li = document.createElement("li");
+    li.textContent = text;
+    board.querySelector(".observations").appendChild(li);
+  });
+  CATEGORIES.forEach((cat) => {
+    const done = (entries) => entries.flat().length === PEOPLE.length;
+    if (!done(cat.fifi) || !done(cat.emu)) return;
+    const row = ranked(combine(cat.fifi, cat.emu)).find((r) => r.name === subject.name);
+    if (!row) return;
+    const li = document.createElement("li");
+    li.innerHTML = `<span></span><strong></strong>`;
+    li.children[0].textContent = cat.mystery ? "??? (classified)" : cat.title;
+    li.children[1].textContent = `#${row.rank}${row.tie ? " (tie)" : ""}`;
+    board.querySelector(".results").appendChild(li);
+  });
+  boards.appendChild(board);
+});
