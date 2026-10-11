@@ -81,8 +81,7 @@ const SUBJECTS = [
     observations: [
       "Subject wears one (1) extremely large ring on the middle finger. It covers an entire knuckle. It may be armor.",
       "A guitar is visible in the background. The hand is not playing it. The hand is choosing not to play it.",
-      "No quarter was provided for scale. Using the cabinets, researchers estimate the hand is approximately 1/14 of a cabinet.",
-      "A Spider-Man box is visible on the desk. The hand shows no signs of web-shooting ability.",
+      "No quarter was provided for scale. Using the cabinets, researchers estimate the hand is approximately 1/5 of a cabinet.",
     ],
     diagnosis: "Late addition to the study. Immediately placed #2 in the most important category. Researchers stand by this decision.",
   },
