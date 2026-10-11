@@ -10,7 +10,7 @@ const CATEGORIES = [
     title: "The Most Important Category",
     emoji: "❓",
     mystery: true, // shh 🤫
-    fifi: ["Furtoe", "David", "Claytron", "Gab", "Jason", "Allan"],
+    fifi: ["Furtoe", "David", ["Claytron", "Gab", "Jason"], "Allan"],
     emu: ["Furtoe", "David", "Gab", "Jason", "Allan", "Claytron"],
   },
   {
