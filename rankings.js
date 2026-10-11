@@ -18,19 +18,19 @@ const CATEGORIES = [
     emoji: "🔮",
     note: "Professionally read from the back of their hands.",
     fifi: ["Claytron", "Allan", "Jason", "Eggsnut", "Gab", "David", "Furtoe"],
-    emu: ["Furtoe", "Claytron", "Allan", "Jason", "Gab", "David"],
+    emu: ["Furtoe", "Eggsnut", "Claytron", "Allan", "Jason", "Gab", "David"],
   },
   {
     title: "Grip Strength",
     emoji: "✊",
     note: "Estimated by looking at a photo. Very scientific.",
     fifi: ["Jason", "Furtoe", "Eggsnut", "David", "Allan", ["Claytron", "Gab"]],
-    emu: ["David", "Jason", "Furtoe", "Gab", ["Allan", "Claytron"]],
+    emu: ["David", "Jason", "Furtoe", "Eggsnut", "Gab", ["Allan", "Claytron"]],
   },
   {
     title: "Aesthetic Ranking",
     emoji: "✨",
     fifi: ["Eggsnut", "Jason", "David", ["Claytron", "Gab", "Allan", "Furtoe"]],
-    emu: ["David", "Jason", ["Claytron", "Gab", "Allan", "Furtoe"]],
+    emu: ["David", "Jason", "Eggsnut", ["Claytron", "Gab", "Allan", "Furtoe"]],
   },
 ];
