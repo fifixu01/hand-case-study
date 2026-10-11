@@ -1,5 +1,3 @@
-const MEDALS = ["🥇", "🥈", "🥉"];
-
 // A ranking is a list of names, where a nested list means those people are tied,
 // e.g. ["Jason", ["Claytron", "Gab"]]. Tied people share a rank and the next rank skips.
 function ranked(entries) {
@@ -32,7 +30,7 @@ function list(entries, className) {
   ol.className = `ranking ${className}`;
   ranked(entries).forEach(({ name, rank, tie }) => {
     const li = document.createElement("li");
-    li.innerHTML = `<span class="pos">${MEDALS[rank - 1] || `#${rank}`}</span><span class="name"></span>`;
+    li.innerHTML = `<span class="pos">#${rank}</span><span class="name"></span>`;
     li.querySelector(".name").textContent = tie ? `${name} (tie)` : name;
     ol.appendChild(li);
   });
